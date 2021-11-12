@@ -2,6 +2,8 @@
 clear
 
 #Probado en Ubuntu 18.04 LTS y 20.04 LTS
+#BETA
+#Solo es recomendable usarlo en la primera instalacion de Wordpress, se crea clave root para Mysql cada vez que se inicia el script
 
 echo "###############################################################################"
 echo "# WordPress Auto Installation Script for CentOS 8 by Daniele Lolli (UncleDan) #"
