@@ -16,7 +16,10 @@ echo "##########################################################################
 echo -n "¿Nombre de la pagina?: "
 read WPC8_SITE_NAME
 
-echo -n "¿Dominio de la pagina? ex(.com .org)(add dot):  "
+echo -n "¿Wildcard de la pagina? ej:( www. ): "
+read WPC8_SITE_WILDCARD
+
+echo -n "¿Dominio de la pagina? ej:(.com .org):  "
 read WPC8_SITE_DOMAIN
 
 # Setting parameters
@@ -108,7 +111,7 @@ touch /var/log/apache2/${WPC8_SITE_NAME}/${WPC8_SITE_NAME}-access.log
 touch /var/log/apache2/${WPC8_SITE_NAME}/${WPC8_SITE_NAME}-error.log
 
 echo "<VirtualHost *:80>
-  ServerName ${WPC8_SITE_NAME}${WPC8_SITE_DOMAIN}
+  ServerName ${WPC8_SITE_WILDCARD}${WPC8_SITE_NAME}${WPC8_SITE_DOMAIN}
   #ServerAlias www.${WPC8_SITE_NAME}${WPC8_SITE_DOMAIN}
   DocumentRoot $WPC8_SITE_FOLDER/
   #DocumentRoot /var/www/${WPC8_SITE_NAME}
