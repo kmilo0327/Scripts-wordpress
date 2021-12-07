@@ -34,7 +34,7 @@ WPC8_DATABASE_TABLES_PREFIX="wp_${WPC8_SITE_NAME}"
 apt update -y && apt upgrade -y
 
 #Instalando Apache y Mysql
-apt install apache2 mariadb-server unzip php php-mysql -y php-xml
+apt install apache2 mariadb-server unzip php php-mysql php-gd php-xml -y
 
 systemctl start mariadb
 
